@@ -189,6 +189,7 @@ header .container nav ul li a {
     -o-transition: all .3s ease-in-out;
 }
 header .container nav ul a:hover,
+header .container nav ul a:active,
 header .container nav ul a.active {
     color: var(--third-color);
 }
@@ -1130,11 +1131,12 @@ header .container .search i {
     -o-transition: .5s;
     cursor: pointer;
     border: none;
-    margin-left: 100%;
-    transform: translateX(-100%);
+    display: flex;
+    margin-left: auto;
 }
-.contact-us form input[type="submit"]:hover {
-    box-shadow: inset 11.3em 0 0 0 white;
+.contact-us form input[type="submit"]:hover,
+.contact-us form input[type="submit"]:visited  {
+    box-shadow: inset 12em 0 0 0 white;
     color: #19c8fa;
     border: 1px solid var(--third-color);
 }
@@ -1217,4 +1219,9 @@ footer .copy span {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+@media (max-width: 767px) {
+    .up {
+        display: none;
+    }
 }
